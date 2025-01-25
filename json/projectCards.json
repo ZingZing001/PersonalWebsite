@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Portfolio Website",
+    "description": "Designed a responsive portfolio using HTML, CSS, and JavaScript.",
+    "image": "assets/project1-thumbnail.jpg",
+    "category": "web",
+    "code": "https://github.com/example",
+    "demo": "https://example.com"
+  },
+  {
+    "title": "Data Analysis Project",
+    "description": "Performed data analysis using Python and Pandas.",
+    "image": "assets/project2-thumbnail.jpg",
+    "category": "data",
+    "code": "https://github.com/example",
+    "demo": "https://example.com"
+  }
+]

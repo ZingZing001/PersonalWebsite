@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <div class="logo">J</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-left">
+      <span class="intro-tag">It's me</span>
+      <h1>Johnson Zhang</h1>
+      <p>Part 3 Software Engineering Student</p>
+      <p> <span class="highlight">Software Developer</span></p>
+      <a href="/assets/resume.pdf" download="Runjia_Zhang_Resume" class="cta-btn">
+        Hire Me
+      </a>
+    </div>
+    <div class="hero-right">
+      <img src="/assets/images/IMG_1213.HEIC" alt="Profile Picture">
+    </div>
+  </section>
+
+  <!-- Highlight Bar -->
+  <section class="highlight-bar">
+    <div class="highlights">
+      <div class="highlight-item">
+        <i class="fas fa-info-circle"></i> <!-- Replace with your icon -->
+        <a href="#about">About Me</a>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-code"></i> <!-- Replace with your icon -->
+        <a href="#languages">Programming Languages</a>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-briefcase"></i> <!-- Replace with your icon -->
+        <a href="#current-employment">Current Employment</a>
+      </div>
+      <div class="highlight-item">
+        <i class="fas fa-envelope"></i> <!-- Replace with your icon -->
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="intro fade-in">
+    <div class="intro-container">
+      <!-- About Text -->
+      <div class="intro-text">
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm <strong>Runjia Zhang</strong>, a proactive and dedicated third-year <strong>Software
+            Engineering</strong> student at the University of Auckland with a passion for AI/Machine Learning and
+          application development.
+        </p>
+        <p>
+          With experience in <strong>Python, Java, C, and MATLAB</strong>, and proficiency in tools like Git and
+          microcontrollers, I strive to develop efficient and impactful solutions. My focus extends to
+          <strong>Object-Oriented Programming</strong>, <strong>Web Development</strong>, and <strong>Software
+            Design</strong>.
+        </p>
+        <p>
+          When I'm not coding, I enjoy teaching piano, practicing Taekwondo (Second Dan Black Belt), and contributing to
+          environmental and community projects.
+        </p>
+      </div>
+
+      <!-- Progress Bars -->
+      <div class="intro-skills">
+        <div class="skill">
+          <span>Wireframing</span>
+          <div class="progress-bar">
+            <div class="progress" data-value="70"></div> <!-- 70% -->
+          </div>
+        </div>
+        <div class="skill">
+          <span>UI/UX</span>
+          <div class="progress-bar">
+            <div class="progress" data-value="70"></div> <!-- 70% -->
+          </div>
+        </div>
+        <div class="skill">
+          <span>Interaction Design</span>
+          <div class="progress-bar">
+            <div class="progress" data-value="50"></div> <!-- 50% -->
+          </div>
+        </div>
+        <div class="skill">
+          <span>Object Oriented Programming (OOP)</span>
+          <div class="progress-bar">
+            <div class="progress" data-value="80"></div> <!-- 80% -->
+          </div>
+        </div>
+        <div class="skill">
+          <span>Applying Algorithm</span>
+          <div class="progress-bar">
+            <div class="progress" data-value="60"></div> <!-- 60% -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Programming Languages Section -->
+  <section id="languages" class="languages fade-in">
+    <h2>Programming Languages</h2>
+    <div class="language-list">
+      <div class="language">
+        <img src="/assets/icons/html.svg" alt="HTML5">
+        <p>HTML5</p>
+      </div>
+      <div class="language">
+        <img src="/assets/icons/css.svg" alt="CSS3">
+        <p>CSS3</p>
+      </div>
+      <div class="language">
+        <img src="/assets/icons/javascript.svg" alt="JavaScript">
+        <p>JavaScript</p>
+      </div>
+      <div class="language">
+        <img src="/assets/icons/java.svg" alt="Java">
+        <p>Java</p>
+      </div>
+      <div class="language">
+        <img src="/assets/icons/python.svg" alt="Python">
+        <p>Python</p>
+      </div>
+      <div class="language">
+        <img src="/assets/icons/c.svg" alt="C">
+        <p>C</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="current-employment" class="employment fade-in">
+    <div class="employment-container">
+      <!-- Flexbox Content Section -->
+      <div class="employment-content">
+        <div class="employment-images">
+          <img src="/assets/icons/logo.png" alt="Organization Logo" class="organization-logo">
+        </div>
+        <div class="employment-text">
+          <h4 class="employment-title">Recent/Current Employment</h4>
+          <h2 class="employment-role">Software Developer Intern</h2>
+          <p>
+            At my recent role, I developed the <strong>WaterMarkRemovalTool</strong>, a Python-based application that
+            removes watermarks from PDF and Word documents. The tool features batch processing, customizable removal
+            modes, and cross-platform support. It demonstrates advanced image processing techniques and GUI
+            development using libraries like PyQt5, PyMuPDF, and scikit-image.
+          </p>
+          <div class="employment-links">
+            <a href="https://github.com/ZingZing001/WaterMarkRemovalTool" target="_blank" class="employment-link">
+              <i class="fab fa-github"></i> View Project
+            </a>
+          </div>
+        </div>
+  </section>
+
+
+  <section id="contact" class="contact fade-in">
+    <h2>Contact Me</h2>
+    <div class="contact-buttons">
+      <!-- Email -->
+      <a href="mailto:runjiazhang.nz@gmail.com" class="contact-button">
+        <i class="fas fa-envelope"></i> Gmail
+      </a>
+      <!-- Phone -->
+      <a href="tel:+642102396903" class="contact-button">
+        <i class="fas fa-phone-alt"></i> Call Me
+      </a>
+      <!-- GitHub -->
+      <a href="https://github.com/ZingZing001" target="_blank" class="contact-button">
+        <i class="fab fa-github"></i> GitHub Profile
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/runjiazhangnz/" target="_blank" class="contact-button">
+        <i class="fab fa-linkedin"></i> LinkedIn Profile
+      </a>
+    </div>
+  </section>
+</body>
+<script src="js/scripts.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/Rapsssito/github-profile-badge@latest/src/widget.min.js"></script>
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
+
+</html>

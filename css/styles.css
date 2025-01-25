@@ -320,7 +320,7 @@ p {
       rgba(0, 0, 0, 0.6)
       /* Bottom gradient color */
     ),
-    url('/assets/images/FoEBuilding.jpg');
+    url('assets/images/FoEBuilding.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

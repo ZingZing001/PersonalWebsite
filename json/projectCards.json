@@ -1,18 +1,44 @@
 [
   {
     "title": "Portfolio Website",
-    "description": "Designed a responsive portfolio using HTML, CSS, and JavaScript.",
-    "image": "assets/project1-thumbnail.jpg",
+    "description": "Designed and developed a personal portfolio website using HTML, CSS, and JavaScript. This responsive website showcases my skills, projects, and achievements.",
+    "image": "assets/portfolio-thumbnail.jpg",
     "category": "web",
-    "code": "https://github.com/example",
-    "demo": "https://example.com"
+    "code": "https://github.com/ZingZing001/PersonalWebsite"
   },
   {
-    "title": "Data Analysis Project",
-    "description": "Performed data analysis using Python and Pandas.",
-    "image": "assets/project2-thumbnail.jpg",
-    "category": "data",
-    "code": "https://github.com/example",
-    "demo": "https://example.com"
+    "title": "Guess Who's the Thief",
+    "description": "A team project combining OpenAI's GPT with JavaFX for a detective-style game. Players interact with AI-powered NPCs and analyze evidence through a dynamic Java-based backend and prompt engineering techniques.",
+    "image": "assets/guess-thief-thumbnail.jpg",
+    "category": "game",
+    "code": "https://github.com/ZingZing001/GuessWhosTheThief"
+  },
+  {
+    "title": "WaterMark Removal Tool",
+    "description": "A cross-platform tool to remove watermarks from PDF and Word documents with ease. Supports batch processing and customizable removal modes.",
+    "image": "assets/watermark-removal-tool-thumbnail.jpg",
+    "category": "software",
+    "code": "https://github.com/ZingZing001/WaterMarkRemovalTool"
+  },
+  {
+    "title": "JavaScript Amazon Project",
+    "description": "A simplified e-commerce web application inspired by Amazon, built using vanilla JavaScript, HTML, and CSS. Features product browsing, dynamic search bar with dropdown suggestions, interactive shopping cart, and responsive design.",
+    "image": "assets/javascript-amazon-project-thumbnail.jpg",
+    "category": "web",
+    "code": "https://github.com/ZingZing001/javascript-amazon-project"
+  },
+  {
+    "title": "Odds and Evens Hand Game",
+    "description": "A simple hand game implemented in Java where a human player faces off against an AI named HAL-9000. The game combines elements of chance and psychology, as the AI attempts to learn the behavior of the human player and predict their moves.",
+    "image": "assets/hand-game-thumbnail.jpg",
+    "category": "game",
+    "code": "https://github.com/ZingZing001/Project_HandGame"
+  },
+  {
+    "title": "Risk Map Project",
+    "description": "A strategic board game where players can simulate territorial expansion and conflict. The game models the map as a graph with countries as nodes and edges representing neighboring relations.",
+    "image": "assets/risk-map-project-thumbnail.jpg",
+    "category": "game",
+    "code": "https://github.com/ZingZing001/Project_RiskMap"
   }
 ]

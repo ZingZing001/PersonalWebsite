@@ -55,7 +55,6 @@ const modal = document.getElementById('project-modal');
 const modalTitle = document.getElementById('modal-title');
 const modalDescription = document.getElementById('modal-description');
 const modalCode = document.getElementById('modal-code');
-const modalDemo = document.getElementById('modal-demo');
 const closeModal = document.querySelector('.close-modal');
 
 function addModalEventListeners() {
@@ -64,12 +63,10 @@ function addModalEventListeners() {
       const title = card.querySelector('h3').textContent;
       const description = card.querySelector('p').textContent;
       const code = card.querySelector('.project-link[href*="github"]').href;
-      const demo = card.querySelector('.project-link[href*="example"]').href;
 
       modalTitle.textContent = title;
       modalDescription.textContent = description;
       modalCode.href = code;
-      modalDemo.href = demo;
 
       modal.style.display = 'flex';
     });
@@ -122,7 +119,10 @@ if (pageButtons.length > 0) {
       projectCards.forEach(card => {
         if (filter === 'all' || card.getAttribute('data-category') === filter) {
           card.style.display = 'block';
-        } else {
+        } else if (filter === 'other' && card.getAttribute('data-category') !== 'web' && card.getAttribute('data-category') !== 'data') {
+          card.style.display = 'block';
+        }
+        else {
           card.style.display = 'none';
         }
       });
@@ -146,18 +146,20 @@ if (pageButtons.length > 0) {
 
         data.forEach(project => {
           const projectCard = `
-          <div class="project-card" data-category="${project.category}">
-            <img src="${project.image}" alt="${project.title}" class="project-image">
-            <div class="project-content">
-              <h3>${project.title}</h3>
-              <p>${project.description}</p>
-              <div class="project-links">
-                <a href="${project.code}" target="_blank" class="project-link">Code</a>
-                <a href="${project.demo}" target="_blank" class="project-link">Live Demo</a>
-              </div>
+        <div class="project-card" data-category="${project.category}">
+          <img src="${project.image}" alt="${project.title}" class="project-image">
+          <div class="project-content">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <div class="project-links">
+              <!-- GitHub Button -->
+              <a href="${project.code}" target="_blank" class="github-button">
+                <i class="fab fa-github"></i> View Code on GitHub
+              </a>
             </div>
           </div>
-        `;
+        </div>
+      `;
           projectContainer.insertAdjacentHTML('beforeend', projectCard);
         });
 

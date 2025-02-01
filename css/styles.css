@@ -829,3 +829,21 @@ p {
   transform: translateY(-2px);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
 }
+
+@media (max-width: 1024px) {
+  .project-cards {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 cards per row */
+    gap: 2rem;
+    /* Reduce spacing for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-cards {
+    grid-template-columns: 1fr;
+    /* 1 card per row */
+    gap: 1.5rem;
+    /* Further reduce spacing for smaller screens */
+  }
+}

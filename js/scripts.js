@@ -73,6 +73,7 @@ function addModalEventListeners() {
   });
 }
 
+// Close modal functionality
 closeModal.addEventListener('click', () => {
   modal.style.display = 'none';
 });
@@ -108,45 +109,48 @@ pageButtons.forEach(button => {
 // Initialize to show the first page
 if (pageButtons.length > 0) {
   pageButtons[0].click();
+}
 
-  // Project filtering and dynamic loading
-  document.addEventListener('DOMContentLoaded', () => {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectContainer = document.querySelector('.project-cards');
+// Project filtering and dynamic loading
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const projectContainer = document.querySelector('.project-cards');
 
-    function applyFilter(filter) {
-      const projectCards = document.querySelectorAll('.project-card');
-      projectCards.forEach(card => {
-        if (filter === 'all' || card.getAttribute('data-category') === filter) {
-          card.style.display = 'block';
-        } else if (filter === 'other' && card.getAttribute('data-category') !== 'web' && card.getAttribute('data-category') !== 'data') {
-          card.style.display = 'block';
-        }
-        else {
-          card.style.display = 'none';
-        }
-      });
-    }
-
-    // Add event listeners to filter buttons
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        const filter = button.getAttribute('data-filter');
-        applyFilter(filter);
-      });
+  function applyFilter(filter) {
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach(card => {
+      if (filter === 'all' || card.getAttribute('data-category') === filter) {
+        card.style.display = 'block';
+      } else if (filter === 'other' && card.getAttribute('data-category') !== 'web' && card.getAttribute('data-category') !== 'data') {
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
     });
+  }
 
-    // Fetch project data and initialize cards
-    fetch('json/projectCards.json')
-      .then(response => response.json())
-      .then(data => {
-        projectContainer.innerHTML = ''; // Clear any existing content
+  // Add event listeners to filter buttons
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      const filter = button.getAttribute('data-filter');
+      applyFilter(filter);
+    });
+  });
 
-        data.forEach(project => {
-          const projectCard = `
-        <div class="project-card" data-category="${project.category}">
+  // Fetch project data and initialize cards
+  fetch('json/projectCards.json')
+    .then(response => response.json())
+    .then(data => {
+      projectContainer.innerHTML = ''; // Clear any existing content
+
+      data.forEach(project => {
+        const projectCard = document.createElement('div');
+        projectCard.classList.add('project-card');
+        projectCard.setAttribute('data-category', project.category);
+
+        projectCard.innerHTML = `
           <img src="${project.image}" alt="${project.title}" class="project-image">
           <div class="project-content">
             <h3>${project.title}</h3>
@@ -158,24 +162,23 @@ if (pageButtons.length > 0) {
               </a>
             </div>
           </div>
-        </div>
-      `;
-          projectContainer.insertAdjacentHTML('beforeend', projectCard);
-        });
+        `;
 
-        // Add modal listeners to dynamically added cards
-        addModalEventListeners();
+        projectContainer.appendChild(projectCard);
+      });
 
-        // Reapply the current filter (default to 'all')
-        const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
-        applyFilter(activeFilter);
+      // Add modal listeners to dynamically added cards
+      addModalEventListeners();
 
-        // Reinitialize animations and pagination
-        handleScrollAnimation();
-        if (pageButtons.length > 0) {
-          pageButtons[0].click();
-        }
-      })
-      .catch(error => console.error('Error loading projects:', error));
-  });
-}
+      // Reapply the current filter (default to 'all')
+      const activeFilter = document.querySelector('.filter-btn.active').getAttribute('data-filter');
+      applyFilter(activeFilter);
+
+      // Reinitialize animations and pagination
+      handleScrollAnimation();
+      if (pageButtons.length > 0) {
+        pageButtons[0].click();
+      }
+    })
+    .catch(error => console.error('Error loading projects:', error));
+});

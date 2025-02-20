@@ -19,8 +19,7 @@ This is my **Personal Portfolio Website**, designed and built to showcase my **p
 - **Frontend**: HTML, CSS, JavaScript  
 - **Icons & Fonts**: Font Awesome, Google Fonts  
 - **Animations & Effects**: CSS Transitions, JavaScript Event Listeners  
-- **Deployment**: GitHub Pages (or Netlify, Vercel if used)  
-
+- **Deployment**: GitHub Pages 
 ## 📂 Project Structure  
 ```plaintext
 /personal-website
